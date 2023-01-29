@@ -1,0 +1,30 @@
+.pop-up {
+  position: fixed;
+  right: 50%;
+  top: 30px;
+  z-index: 100;
+
+  padding: 30px;
+
+  opacity: 0.8;
+  font-weight: 500;
+  color: #fff;
+  background-color: rgba(171, 129, 108, 0.8);
+
+  transition: opacity 1s $tr-function, background-color 1s $tr-function;
+  transform: translateX(50%);
+
+  @media screen and (max-width: 767px) {
+    width: 90%;
+    text-align: center;
+  }
+
+  &--hide {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &--error {
+    background-color: rgba(250, 128, 114, 0.8);
+  }
+}

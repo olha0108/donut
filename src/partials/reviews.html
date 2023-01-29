@@ -1,0 +1,150 @@
+<section class="reviews" id="reviews">
+  <div class="container reviews__container">
+    <h2 class="title reviews__title">Reviews</h2>
+
+    <!-- Swiper (стилі зроблені не по БЕМ, потрібні для JS) -->
+    <div class="swiper">
+      <div class="swiper__wrapper">
+        <article class="swiper__slide">
+          <picture>
+            <source
+              srcset="
+                ./images/desktop/reviews_john_desktop.png    1x,
+                ./images/desktop/reviews_john_desktop_2x.png 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/tablet/reviews_john_tablet.png    1x,
+                ./images/tablet/reviews_john_tablet_2x.png 2x
+              "
+              media="(min-width: 768px) and (max-width: 1279px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/desktop/reviews_john_desktop.png    1x,
+                ./images/desktop/reviews_john_desktop_2x.png 2x
+              "
+              media="(max-width: 767px)"
+              type="image/png"
+            />
+            <img
+              class="swiper__image"
+              src="./images/desktop/reviews_john_desktop.png"
+              alt="John"
+            />
+          </picture>
+          <svg class="swiper__rate" width="136" height="28">
+            <use href="./images/icons.svg#icon-rate5"></use>
+          </svg>
+          <p class="swiper__name">John</p>
+          <div class="swiper__comment">
+            <h3 class="visually-hidden">Comment</h3>
+            Last time I have visited a cooking course by Eva I was impressed
+            with the way she explained everything to people. You can be sure you
+            will manage to cook a delicious dish even if it is your first time
+            in the kitchen! Thank you so much for the masterclass! Looking
+            forward to the next one and highly recommend it to everyone!
+          </div>
+        </article>
+
+        <article class="swiper__slide">
+          <picture>
+            <source
+              srcset="
+                ./images/desktop/reviews_will_desktop.png    1x,
+                ./images/desktop/reviews_will_desktop_2x.png 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/tablet/reviews_will_tablet.png    1x,
+                ./images/tablet/reviews_will_tablet_2x.png 2x
+              "
+              media="(min-width: 768px) and (max-width: 1279px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/mobile/reviews_will_mobile.png    1x,
+                ./images/mobile/reviews_will_mobile_2x.png 2x
+              "
+              media="(max-width: 767px)"
+              type="image/png"
+            />
+            <img
+              class="swiper__image"
+              src="./images/desktop/reviews_will_desktop.png"
+              alt="Will"
+            />
+          </picture>
+          <svg class="swiper__rate" width="136" height="28">
+            <use href="./images/icons.svg#icon-rate5"></use>
+          </svg>
+          <p class="swiper__name">Will</p>
+          <div class="swiper__comment">
+            <h3 class="visually-hidden">Comment</h3>
+            Last time I have visited a cooking course by Eva I was impressed
+            with the way she explained everything to people. You can be sure you
+            will manage to cook a delicious dish even if it is your first time
+            in the kitchen! Thank you so much for the masterclass! Looking
+            forward to the next one and highly recommend it to everyone!
+          </div>
+        </article>
+
+        <article class="swiper__slide">
+          <picture>
+            <source
+              srcset="
+                ./images/desktop/reviews_elisabeth_desktop.png    1x,
+                ./images/desktop/reviews_elisabeth_desktop_2x.png 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/tablet/reviews_elisabeth_tablet.png    1x,
+                ./images/tablet/reviews_elisabeth_tablet_2x.png 2x
+              "
+              media="(min-width: 768px) and (max-width: 1279px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/desktop/reviews_elisabeth_desktop.png    1x,
+                ./images/desktop/reviews_elisabeth_desktop_2x.png 2x
+              "
+              media="(max-width: 767px)"
+              type="image/png"
+            />
+            <img
+              class="swiper__image"
+              src="./images/desktop/reviews_elisabeth_desktop.png"
+              alt="Elisabeth"
+            />
+          </picture>
+          <svg class="swiper__rate" width="136" height="28">
+            <use href="./images/icons.svg#icon-rate4"></use>
+          </svg>
+          <p class="swiper__name">Elisabeth</p>
+          <div class="swiper__comment">
+            <h3 class="visually-hidden">Comment</h3>
+            Last time I have visited a cooking course by Eva I was impressed
+            with the way she explained everything to people. You can be sure you
+            will manage to cook a delicious dish even if it is your first time
+            in the kitchen! Thank you so much for the masterclass! Looking
+            forward to the next one and highly recommend it to everyone!
+          </div>
+        </article>
+      </div>
+
+      <div class="swiper__pagination"></div>
+    </div>
+  </div>
+</section>

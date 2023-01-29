@@ -1,0 +1,116 @@
+.footer {
+  overflow: hidden;
+  padding-top: 32px;
+  padding-bottom: 20px;
+}
+
+.footer__box {
+  margin-top: 32px;
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    margin-top: 59px;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 80px;
+    justify-content: space-around;
+  }
+}
+
+.footer__tel {
+  display: inline;
+
+  margin-right: 59px;
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    margin-right: 426px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 620px;
+    margin-left: 140px;
+  }
+}
+
+.footer__location {
+  position: relative;
+
+  display: inline;
+}
+
+.footer__icon {
+  fill: currentColor;
+}
+
+.footer__link {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.25;
+
+  transition: color $tr-duration $tr-function;
+
+  &:hover,
+  &:focus {
+    color: $button-hover-color;
+  }
+
+  &:focus {
+    outline: 1px solid #575655;
+  }
+}
+
+.footer__location::after {
+  content: '';
+  position: absolute;
+  bottom: -55px;
+  right: -45px;
+  z-index: -1;
+
+  width: 113px;
+  height: 99px;
+
+  background-image: url(../images/background/footer/wheat_flour_mobile.png);
+  background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/background/footer/wheat_flour_mobile@2x.png);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    bottom: -80px;
+    right: -127px;
+    width: 207px;
+    height: 182px;
+
+    background-image: url(../images/background/footer/wheat_flour_tablet.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/background/footer/wheat_flour_tablet@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: -145px;
+    right: -310px;
+    z-index: 1;
+
+    width: 355px;
+    height: 312px;
+
+    background-image: url(../images/background/footer/wheat_flour_desctop.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/background/footer/wheat_flour_desctop@2x.png);
+    }
+  }
+}

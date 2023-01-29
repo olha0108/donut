@@ -1,0 +1,162 @@
+.bg__aboutus {
+   @media screen and (min-width: 1280px) {
+      background-image: url(../images/background/background_desktop/background_spoon_desktop.png);
+      background-repeat: no-repeat;
+   }
+}
+
+// back top
+.bg-top {
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: -2;
+   width: 100%;
+   height: 460px;
+   background-image: url(../images/background/background_mobile/background_top_mobile.png);
+   background-size: 100% 460px;
+   background-repeat: no-repeat;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+   .bg-top {
+      background-image: url(../images/background/background_mobile/background_top_mobile_2x.png);
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+   .bg-top {
+      height: 622px;
+      background-size: 100% 622px;
+      background-image: url(../images/background/background_tablet/background_top_tablet.png);
+   }
+   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .bg-top {
+         background-image: url(../images/background/background_tablet/background_top_tablet_2x.png);
+      }
+   }
+}
+
+@media (min-width: 1280px) {
+   .bg-top {
+      height: 1035px;
+      background-image: url(../images/background/background_desktop/background_top_desktop.png);
+      background-size: 100% 1035px;
+   }
+
+   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .bg-top {
+         background-image: url(../images/background/background_desktop/background_top_desktop_2x.png);
+      }
+   }
+}
+// back top and
+
+// back bottom
+
+.bg-bottom {
+   display: block;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 180px;
+   z-index: -2;
+   width: 100%;
+   height: 1337px;
+   background-image: url(../images/background/background_mobile/background_bottom_mobile.png);
+   background-size: 100% 1337px;
+   background-repeat: no-repeat;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+   .bg-bottom {
+      background-image: url(../images/background/background_mobile/background_bottom_mobile_2x.png);
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+   .bg-bottom {
+      bottom: 0;
+      height: 1470px;
+      background-image: url(../images/background/background_tablet/background_bottom_tablet.png);
+      background-size: 100% 1470px;
+   }
+
+   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .bg-bottom {
+         background-image: url(../images/background/background_tablet/background_bottom_tablet_2x.png);
+      }
+   }
+}
+
+@media (min-width: 1280px) {
+   .bg-bottom {
+      bottom: 0;
+      height: 1861px;
+      background-size: 100% 1861px;
+      background-image: url(../images/background/background_desktop/background_bottom_desktop.png);
+   }
+
+   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .bg-bottom {
+         background-image: url(../images/background/background_desktop/background_bottom_desktop_2x.png);
+      }
+   }
+}
+// back bottom and
+
+// donut top
+
+.donut {
+   position: absolute;
+   display: block;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   width: 120px;
+   height: 114px;
+   background-image: url(../images/mobile/donuts_mobile.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+   .donut {
+      background-image: url(../images/mobile/donuts_mobile_2x.png);
+   }
+}
+
+@media (min-width: 768px) {
+   .donut {
+      top: 0;
+      right: 100px;
+      left: auto;
+      width: 380px;
+      height: 361px;
+      background-image: url(../images/tablet/donuts_tablet.png);
+   }
+
+   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .donut {
+         background-image: url(../images/tablet/donuts_tablet_2x.png);
+      }
+   }
+}
+
+@media (min-width: 1280px) {
+   .donut {
+      top: 0;
+      right: 0;
+      width: 716px;
+      height: 661px;
+      overflow: visible;
+      background-image: url(../images/desktop/donuts_desktop.png);
+   }
+
+   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .donut {
+         background-image: url(../images/desktop/donuts_desktop_2x.png);
+      }
+   }
+}

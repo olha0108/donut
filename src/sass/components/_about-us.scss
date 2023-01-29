@@ -1,0 +1,82 @@
+.aboutus {
+  @media screen and (min-width: 1280px) {
+    padding-top: 40px;
+  }
+}
+
+.container__aboutus {
+  display: block;
+  padding-top: 5px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 69px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 71px;
+    max-width: 1033px;
+  }
+}
+
+.aboutus__image {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    max-width: 359px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 501px;
+  }
+}
+
+.aboutus__box {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 16px) / 2);
+  }
+}
+
+.aboutus__desc {
+  @media screen and (max-width: 768px) {
+    padding-top: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 16px) / 2);
+    margin-left: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 392px;
+    margin-left: 139px;
+  }
+}
+
+.aboutus__header {
+  @extend .title;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+}
+
+.aboutus__text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $name-reviews-color;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+    line-height: 1.22;
+    margin-bottom: 29px;
+  }
+}

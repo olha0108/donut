@@ -1,0 +1,286 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+
+  color: $primary-text-color;
+  background-color: $primary-bg-color;
+
+  @media screen and (min-width: 1280px) {
+    background-color: $secondary-bg-color;
+  }
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (min-width: 1279.98px) {
+    background-position: 0 0;
+  }
+
+  &.overflow-hidden{
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// container
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 320px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 320px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 768px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 1280px;
+  }
+}
+
+// title for h1 & h2
+.title {
+  font-family: 'Caveat Brush', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25;
+  color: $title-color;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 36px;
+    line-height: 1.8;
+  }
+}
+
+// button for hero, registration & contact
+.button {
+  width: 145px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+
+  font-family: 'Caveat Brush', cursive;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+
+  cursor: pointer;
+  color: $button-text-color;
+  background-color: $button-bg-color;
+
+  transition: transform $tr-duration $tr-function;
+
+  @media screen and (min-width: 1280px) {
+    width: 158px;
+    height: 45px;
+
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $button-hover-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    background: $button-click-color;
+    transform: scale(0.95);
+  }
+}
+
+// social for hero & footer
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.social__item {
+  width: 32px;
+  height: 32px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: $social-icon-color;
+  border-radius: 50%;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+
+  transition: fill $tr-duration $tr-function,
+    transform $tr-duration $tr-function;
+
+  &:hover,
+  &:focus {
+    color: $button-text-color;
+    background-color: $button-bg-color;
+
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.social__link--transparent {
+  background-color: transparent;
+}
+
+.social__icon {
+  fill: currentColor;
+}
+
+// read more for about us & program
+.read-more {
+  display: block;
+  margin-top: 16px;
+  padding: 0;
+
+  max-width: 200px;
+
+  cursor: pointer;
+  font-family: 'Caveat Brush', cursive;
+  line-height: 1.28;
+  color: $pagination-color;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.extra-text {
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
+#read-more-aboutus:checked ~ .extra-text,
+#read-more-program:checked ~ .extra-text {
+  display: block;
+}
+
+.read-more__less {
+  display: none;
+}
+
+#read-more-aboutus:checked ~ .read-more .read-more__more,
+#read-more-program:checked ~ .read-more .read-more__more {
+  display: none;
+}
+
+#read-more-aboutus:checked ~ .read-more .read-more__less,
+#read-more-program:checked ~ .read-more .read-more__less {
+  display: inline;
+}
+
+// input for registration & contact
+
+.input-data {
+  display: block;
+
+  width: 100%;
+
+  line-height: 1.25;
+  color: $rate-star-color;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid $rate-star-color;
+  outline: none;
+
+  &::placeholder {
+    padding-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $form-placeholder-color;
+  }
+
+  &:focus-within,
+  &:hover,
+  &:focus {
+    background-color: $primary-bg-color;
+    border-radius: 4px;
+    box-shadow: $form-shadow;
+    cursor: pointer;
+  }
+}
+
+input:invalid {
+  color: red;
+  outline: 1px solid red;
+}

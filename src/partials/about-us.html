@@ -1,0 +1,65 @@
+<!--  --------------- About us  -->
+
+<section class="aboutus" id="about-us">
+  <div class="bg__aboutus">
+    <div class="container container__aboutus">
+      <div class="aboutus__box">
+        <picture>
+          <source
+            srcset="
+              ./images/desktop/cupcake-box_desktop.png    1x,
+              ./images/desktop/cupcake-box_desktop_2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/tablet/cupcake-box_tablet.png    1x,
+              ./images/tablet/cupcake-box_tablet_2x.png 2x
+            "
+            media="(max-width: 1199px)"
+          />
+          <source
+            srcset="
+              ./images/mobile/cupcake-box_mobile.png    1x,
+              ./images/mobile/cupcake-box_mobile_2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img
+            src="./images/desktop/cupcake-box_desktop.png"
+            alt="Cupcakes"
+            class="aboutus__image"
+          />
+        </picture>
+      </div>
+
+      <div class="aboutus__desc">
+        <h2 class="aboutus__header">About us</h2>
+        <p class="aboutus__text">
+          Oh My Donut is the shop which adores tasty deserts and spend hours to
+          create sophisticated donuts which will save the world!
+        </p>
+        <p class="aboutus__text">
+          Eva has been baking since she was six years old and over the last 49
+          years, she has created hundreds of cakes for weddings and has baked
+          for many celebrities. Eva and our shop have received multiple awards &
+          recognition for excellence.
+        </p>
+
+        <input type="checkbox" id="read-more-aboutus" hidden />
+        <p class="aboutus__text extra-text">
+          We are going to teach you how to cook with passion and sparkles in
+          your eyes! We love what we do and believe you will enjoy our cooking
+          atmosphere!
+        </p>
+        <label for="read-more-aboutus" class="read-more">
+          <span class="read-more__more">Read more</span>
+          <span class="read-more__less">Less</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  END About us  -->

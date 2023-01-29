@@ -1,0 +1,383 @@
+.program {
+  padding-top: 16px;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 77px;
+    padding-bottom: 95px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 22px;
+    padding-bottom: 170px;
+  }
+}
+
+.container__program {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1033px;
+  }
+}
+
+.program__title {
+  @extend .title;
+
+  margin-bottom: 8px;
+
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+// First column
+
+.program__description {
+  @media screen and (min-width: 768px) {
+    max-width: 335px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: calc(100% - 642px);
+  }
+}
+
+.program__list {
+  margin-top: 8px;
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 20px;
+  }
+}
+
+.program__paragraph::before {
+  content: '> ';
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+  }
+}
+
+.program__paragraph,
+.program__text {
+  // font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}
+
+.program__paragraph {
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 16px;
+  }
+}
+
+// Second column
+
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 32px;
+    margin-top: 0;
+    height: 100%;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 142px;
+    padding-top: 53px;
+  }
+}
+
+.schedule__item {
+  position: relative;
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 64px;
+
+  width: 130px;
+  height: 130px;
+
+  background-color: $frame-bg-color;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
+
+  transition: background-color $tr-duration $tr-function,
+    box-shadow $tr-duration $tr-function;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-right: 31px;
+    margin-bottom: 50px;
+    width: 152px;
+    height: 152px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 140px;
+    margin-bottom: 80px;
+    width: 180px;
+    height: 180px;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0;
+    transform: translateY(30px);
+
+    @media screen and (min-width: 768px) {
+      transform: translateY(45px);
+    }
+
+    @media screen and (min-width: 1280px) {
+      transform: translateY(123px);
+    }
+  }
+
+  &:nth-child(n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.schedule__item:hover,
+.schedule__item:focus {
+  background-color: $form-placeholder-color;
+  box-shadow: 0px 0px 3px 5px rgba(171, 129, 108, 0.5);
+}
+
+.schedule__item::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  transform: translate(-35%, -50%);
+  width: 76px;
+  height: 80px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: transform 500ms $tr-function;
+
+  @media screen and (min-width: 768px) {
+    transform: translate(-54%, -50%);
+    width: 70px;
+    height: 75px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    transform: translate(-55%, -50%);
+    width: 85px;
+    height: 95px;
+  }
+}
+
+.schedule__item:hover.schedule__item::before,
+.schedule__item:focus.schedule__item::before {
+  transform: translate(-35%, -50%) rotate(15deg);
+
+  @media screen and (min-width: 768px) {
+    transform: translate(-54%, -50%) rotate(15deg);
+  }
+
+  @media screen and (min-width: 1280px) {
+    transform: translate(-55%, -50%) rotate(15deg) scale(1.1);
+  }
+}
+
+// Pseudo-elements Donuts
+
+.schedule__item:first-child::before {
+  background-image: url(../images/mobile/program_type-of-event_mobile.png);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/program_type-of-event_mobile_2x.png);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/tablet/program_type-of-event_tablet.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/tablet/program_type-of-event_tablet_2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1281px) {
+    background-image: url(../images/desktop/program_type-of-event_desktop.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/desktop/program_type-of-event_desktop_2x.png);
+    }
+  }
+}
+
+.schedule__item:nth-child(2)::before {
+  background-image: url(../images/mobile/program_number-of-gests_mobile.png);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/program_number-of-gests_mobile_2x.png);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/tablet/program_number-of-gests_tablet.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/tablet/program_number-of-gests_tablet_2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1281px) {
+    background-image: url(../images/desktop/program_number-of-gests_desktop.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/desktop/program_number-of-gests_desktop_2x.png);
+    }
+  }
+}
+
+.schedule__item:nth-child(3)::before {
+  background-image: url(../images/mobile/program_time-of-event_mobile.png);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/program_time-of-event_mobile_2x.png);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/tablet/program_time-of-event_tablet.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/tablet/program_time-of-event_tablet_2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1281px) {
+    background-image: url(../images/desktop/program_time-of-event_desktop.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/desktop/program_time-of-event_desktop_2x.png);
+    }
+  }
+}
+
+.schedule__item:last-child::before {
+  background-image: url(../images/mobile/program_the-host-speaks_mobile.png);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/program_the-host-speaks_mobile_2x.png);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/tablet/program_the-host-speaks_tablet.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/tablet/program_the-host-speaks_tablet_2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1281px) {
+    background-image: url(../images/desktop/program_the-host-speaks_desktop.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/desktop/program_the-host-speaks_desktop_2x.png);
+    }
+  }
+}
+
+// Block in thr ring
+
+.schedule__block {
+  position: absolute;
+  bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    bottom: 16px;
+  }
+}
+
+.schedule__name {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 18px;
+  line-height: 1.28;
+  text-align: center;
+  color: $frame-title-color;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.schedule__name--small-size {
+  margin-top: 5px;
+  margin-bottom: 8px;
+
+  font-size: 14;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 14px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.schedule__icon {
+  width: 19px;
+  height: 19px;
+
+  @media screen and (min-width: 768px) {
+    width: 21px;
+    height: 21px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 25px;
+    height: 25px;
+  }
+}

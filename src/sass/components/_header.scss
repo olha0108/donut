@@ -1,0 +1,158 @@
+// main block geometric
+
+.header__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+
+  @media screen and (max-width: 319px) {
+    padding-right: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 35px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 38px;
+  }
+}
+
+// LOGO
+
+.logo {
+  margin-left: calc(100% / 2 - 48px);
+
+  text-decoration: none;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 162px;
+  }
+}
+
+.logo__ico {
+  width: 96px;
+  height: 45px;
+
+  @media screen and (min-width: 1280px) {
+    width: 158px;
+    height: 82px;
+  }
+}
+
+// drop MENU in Mobile and Tablet version
+
+.mobile-menu {
+  @media screen and (max-width: 1279px) {
+    display: none;
+    margin-left: auto;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    background: rgba(254, 243, 228, 0.9);
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support - Уточнить у ментора/ТИМЛИДА*/
+  }
+
+  &::before {
+    content: url('../images/logo.svg');
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    width: 190px;
+    height: 85px;
+
+    @media screen and (min-width: 1280px) {
+      display: none;
+    }
+  }
+}
+
+.mobile-menu.is-open {
+  display: flex;
+  flex-direction: column;
+  z-index: 997;
+}
+
+.mobile-menu__button {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.mobile-menu__buttonIco {
+  z-index: 998;
+}
+
+.mobile-menu__icoClose {
+  display: none;
+}
+
+.mobile-menu__button.is-open .mobile-menu__icoClose {
+  display: block;
+}
+
+.mobile-menu__button.is-open .mobile-menu__icoMenu {
+  display: none;
+}
+
+// site NAVIGATION
+
+.site-nav {
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+}
+
+.site-nav__item {
+  @media screen and (max-width: 1279px) {
+    margin: 40px 0;
+
+    &:first-child .site-nav__link {
+      color: $nav-hover-color;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.site-nav__link {
+  text-decoration: none;
+  color: $nav-color;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1280px) {
+    padding: 5px 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $nav-hover-color;
+  }
+}
